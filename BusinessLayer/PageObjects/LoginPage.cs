@@ -13,6 +13,8 @@ internal class LoginPage
         this.driver = driver;
     }
 
+    // using CSS selectors only because task requirements state so
+    // username, password and button can be located by Id
     private readonly By UsernameLocator = By.CssSelector("#user-name");
     private readonly By PasswordLocator = By.CssSelector("#password");
     private readonly By LoginButtonLocator = By.CssSelector("#login-button");
