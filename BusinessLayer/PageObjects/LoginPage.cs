@@ -43,6 +43,7 @@ internal class LoginPage
         driver.EnterText(PasswordLocator, password);
         return this;
     }
+
     public LoginPage ClearPassword()
     {
         driver.ClearInputField(PasswordLocator);
