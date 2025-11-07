@@ -1,6 +1,7 @@
 using FinalTask.BusinessLayer;
 using FinalTask.BusinessLayer.PageObjects;
 using FinalTask.CoreLayer.WebDriver;
+using FluentAssertions;
 
 namespace FinalTask.TestLayer;
 
@@ -24,7 +25,7 @@ internal class LoginTests : BaseTest
             .ClearPassword()
             .ClickLoginButton();
 
-        Assert.That(loginPage.GetErrorMessage(), Does.Contain("Username is required"));
+        loginPage.GetErrorMessage().Should().Contain("Username is required");
     }
 
     [TestCase("username", "password")]
@@ -38,7 +39,7 @@ internal class LoginTests : BaseTest
             .ClearPassword()
             .ClickLoginButton();
 
-        Assert.That(loginPage.GetErrorMessage(), Does.Contain("Password is required"));
+        loginPage.GetErrorMessage().Should().Contain("Password is required");
     }
 
     [TestCaseSource(nameof(ValidLoginData))]
@@ -51,7 +52,7 @@ internal class LoginTests : BaseTest
             .EnterPassword(loginModel.Password)
             .ClickLoginButton();
 
-        Assert.That(driver.GetTitle, Is.EqualTo("Swag Labs"));
+        driver.GetTitle().Should().Be("Swag Labs");
     }
 
     private static IEnumerable<LoginModel> ValidLoginData()

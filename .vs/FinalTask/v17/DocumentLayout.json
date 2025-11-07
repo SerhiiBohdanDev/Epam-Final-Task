@@ -59,7 +59,8 @@
               "RelativeToolTip": "CoreLayer\\WebDriver\\WebDriverFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T12:00:47.502Z"
+              "WhenOpened": "2025-11-07T12:00:47.502Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -71,7 +72,8 @@
               "RelativeToolTip": "CoreLayer\\WebDriver\\WebDriverWrapper\\WebDriverWrapper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T11:55:26.14Z"
+              "WhenOpened": "2025-11-07T11:55:26.14Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -81,9 +83,10 @@
               "RelativeDocumentMoniker": "BusinessLayer\\PageObjects\\LoginPage.cs",
               "ToolTip": "F:\\EPAM\\Epam-Final-Task\\BusinessLayer\\PageObjects\\LoginPage.cs",
               "RelativeToolTip": "BusinessLayer\\PageObjects\\LoginPage.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAzwDcAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwDcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T11:11:33.992Z"
+              "WhenOpened": "2025-11-07T11:11:33.992Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -93,7 +96,7 @@
               "RelativeDocumentMoniker": "TestLayer\\LoginTests.cs",
               "ToolTip": "F:\\EPAM\\Epam-Final-Task\\TestLayer\\LoginTests.cs",
               "RelativeToolTip": "TestLayer\\LoginTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAYwBsAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-07T09:33:18.733Z",
               "EditorCaption": ""

@@ -204,3 +204,4 @@ F:\EPAM\Epam-Final-Task\obj\Debug\net8.0\refint\FinalTask.dll
 F:\EPAM\Epam-Final-Task\obj\Debug\net8.0\FinalTask.pdb
 F:\EPAM\Epam-Final-Task\obj\Debug\net8.0\FinalTask.genruntimeconfig.cache
 F:\EPAM\Epam-Final-Task\obj\Debug\net8.0\ref\FinalTask.dll
+F:\EPAM\Epam-Final-Task\bin\Debug\net8.0\FluentAssertions.dll
