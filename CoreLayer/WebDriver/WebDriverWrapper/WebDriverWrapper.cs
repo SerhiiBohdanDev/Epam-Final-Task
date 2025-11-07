@@ -35,13 +35,13 @@ internal class WebDriverWrapper
 
     public void EnterText(By by, string text)
     {
-        var element = WaitForElementToBePresent(by, timeout);
+        var element = WaitForElementToBePresent(by);
         element.SendKeys(text);
     }
 
     public void ClearInputField(By by)
     {
-        var element = WaitForElementToBePresent(by, timeout);
+        var element = WaitForElementToBePresent(by);
         // simply using the Clear() method doesn't work as it restores the previous values, this way it works correctly
         element.SendKeys(Keys.Control + "a");
         element.SendKeys(Keys.Delete);
@@ -49,15 +49,15 @@ internal class WebDriverWrapper
 
     public void ClickElement(By by)
     {
-        var element = WaitForElementToBePresent(by, timeout);
+        var element = WaitForElementToBePresent(by);
         element.Click();
     }
 
-    public IWebElement FindElement(By by) => WaitForElementToBePresent(by, timeout);
+    public IWebElement FindElement(By by) => WaitForElementToBePresent(by);
 
-    private IWebElement WaitForElementToBePresent(By by, TimeSpan _timeout)
+    private IWebElement WaitForElementToBePresent(By by)
     {
-        var wait = new WebDriverWait(driver, _timeout);
+        var wait = new WebDriverWait(driver, timeout);
         return wait.Until(drv =>
         {
             try
