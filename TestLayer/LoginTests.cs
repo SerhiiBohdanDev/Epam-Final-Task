@@ -1,3 +1,4 @@
+using FinalTask.BusinessLayer;
 using FinalTask.BusinessLayer.PageObjects;
 using FinalTask.CoreLayer.WebDriver;
 
@@ -40,21 +41,26 @@ internal class LoginTests : BaseTest
         Assert.That(loginPage.GetErrorMessage(), Does.Contain("Password is required"));
     }
 
-    [TestCase("standard_user", "secret_sauce")]
-    [TestCase("locked_out_user", "secret_sauce")]
-    [TestCase("problem_user", "secret_sauce")]
-    [TestCase("performance_glitch_user", "secret_sauce")]
-    [TestCase("error_user", "secret_sauce")]
-    [TestCase("visual_user", "secret_sauce")]
-    public void CorrectLoginTest(string username, string password)
+    [TestCaseSource(nameof(ValidLoginData))]
+    public void CorrectLoginTest(LoginModel loginModel)
     {
         var loginPage = new LoginPage(driver);
         loginPage
             .Open()
-            .EnterUsername(username)
-            .EnterPassword(password)
+            .EnterUsername(loginModel.Username)
+            .EnterPassword(loginModel.Password)
             .ClickLoginButton();
 
         Assert.That(driver.GetTitle, Is.EqualTo("Swag Labs"));
+    }
+
+    private static IEnumerable<LoginModel> ValidLoginData()
+    {
+        yield return new LoginModel() { Username = "standard_user", Password = "secret_sauce" };
+        yield return new LoginModel() { Username = "locked_out_user", Password = "secret_sauce" };
+        yield return new LoginModel() { Username = "problem_user", Password = "secret_sauce" };
+        yield return new LoginModel() { Username = "performance_glitch_user", Password = "secret_sauce" };
+        yield return new LoginModel() { Username = "error_user", Password = "secret_sauce" };
+        yield return new LoginModel() { Username = "visual_user", Password = "secret_sauce" };
     }
 }
